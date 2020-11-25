@@ -147,16 +147,4 @@ pipeline {
 	}	
 		  	 	
 }
-       post {
-
-	    script{
-                emailext attachLog: true,
-                body: '''${SCRIPT, template="groovy-html.template"}''',
-                mimeType: 'text/html',
-                charset:'UTF-8',
-                subject: "${currentBuild.fullDisplayName} ¹¹½¨Ê§°Ü",
-                to: '121955443@qq.com'
-         }
-
-      }
 }
